@@ -36,7 +36,7 @@
                         <div class="card mb-4 box-shadow">
                             <div class="card-header text-center font-weight-bold">Obi-Wan Kenobi</div>
                             <img class="card-img-top" src="assets/images/obiwan-kenobi.jpg" alt="Obi-Wan Kenobi">
-                            <div id="#Player1Stats">
+                            <div id="#Player1Stats" style="display: none">
                                 <div>
                                     HP
                                     <div class="progress">
@@ -80,7 +80,7 @@
                         <div class="card mb-4 box-shadow">
                             <div class="card-header text-center font-weight-bold">Luke Skywalker</div>
                             <img class="card-img-top" src="assets/images/luke-skywalker.jpg" alt="Luke Skywalker">
-                            <div id="#Player2Stats">
+                            <div id="#Player2Stats" style="display: none">
                                 <div>
                                     HP
                                     <div class="progress">
@@ -124,7 +124,7 @@
                         <div class="card mb-4 box-shadow">
                             <div class="card-header text-center font-weight-bold">Darth Sidious</div>
                             <img class="card-img-top" src="assets/images/darth-sidious.jpg" alt="Darth Sidious">
-                            <div id="#Player3Stats">
+                            <div id="#Player3Stats" style="display: none">
                                 <div>
                                     HP
                                     <div class="progress">
@@ -168,7 +168,7 @@
                         <div class="card mb-4 box-shadow">
                             <div class="card-header text-center font-weight-bold">Darth Maul</div>
                             <img class="card-img-top" src="assets/images/darth-maul.jpeg" alt="Darth Maul">
-                            <div id="#Player4Stats">
+                            <div id="#Player4Stats" style="display: none">
                                 <div>
                                     HP
                                     <div class="progress">
@@ -212,12 +212,27 @@
             </div>
         </div>
 
-        <section class="container" id="informationSection">
+        <div class="jumbotron">
             <!--Game comments on this row-->
-            <div class="row"></div>
+            <div>
+                <div class="display-5 pb-5" id="Information">
+                    <h1 class="display-5 text-center" id="presentation">Select you caracter!</h1>
+                </div>
+                <ul class="col-md-8 mx-auto" style="display: none">
+                    <li class="list-group-item" id="attacker"></li>
+                    <li class="list-group-item" id="defender"></li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="list-group pt-2" id="gameActions">
+                </ul>
+            </div>
             <!--Button on this row-->
-            <div class="row"></div>
-        </section>
+            <div class="row">
+                <button type="button" class="btn btn-danger  btn-lg pl-5 pr-5 mx-auto" id="attackButton" style="display: none">Attack</button>
+                <!---->
+            </div>
+        </div>
     </main>
 </body>
 
