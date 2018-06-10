@@ -208,7 +208,8 @@ function attackEnemy() {
     updateMessages(enemyDamage, playerDamage);
 
     game.enemySelected.updateCurrentLifePoints(game.playerSelected.currentAttackPower);
-
+    game.playerSelected.updateAttackPower();
+    
     if (!game.enemySelected.isAlive()) {
         if (game.existAvaliablePlayers()) {
             moveToNextPlayer();
@@ -221,8 +222,6 @@ function attackEnemy() {
         updatePlayerStats();
         if (!game.playerSelected.isAlive()) {
             gameOver();
-        } else {
-            game.playerSelected.updateAttackPower();
         }
     }
 }
