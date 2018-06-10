@@ -30,7 +30,7 @@ var player1 = {
         }
     },
     attackerPowerPercentage: function () {
-        return (this.currentAttackPower / 1000) * 100; //Divide by max. attack power.
+        return (this.currentAttackPower / 96) * 100; //Divide by max. attack power.
     }
 };
 
@@ -64,7 +64,7 @@ var player2 = {
         }
     },
     attackerPowerPercentage: function () {
-        return (this.currentAttackPower / 1000) * 100; //Divide by max. attack power.
+        return (this.currentAttackPower / 55) * 100; //Divide by max. attack power.
     }
 };
 
@@ -98,7 +98,7 @@ var player3 = {
         }
     },
     attackerPowerPercentage: function () {
-        return (this.currentAttackPower / 1000) * 100; //Divide by max. attack power.
+        return (this.currentAttackPower / 160) * 100; //Divide by max. attack power.
     }
 };
 
@@ -132,7 +132,7 @@ var player4 = {
         }
     },
     attackerPowerPercentage: function () {
-        return (this.currentAttackPower / 1000) * 100; //Divide by max. attack power.
+        return (this.currentAttackPower / 175) * 100; //Divide by max. attack power.
     }
 };
 
@@ -271,6 +271,17 @@ function updatePlayer(player) {
     $("#" + player + "-img").css("pointer-events", "none");
     $("#" + player + "-img").css("cursor", "default");
     $("#" + player + "-button").css("display", "none");
+    
+    if (player === "obi") {
+        $("#collapseOne").collapse('hide');
+    } else if(player === "luke"){
+        $("#collapseTwo").collapse('hide');
+    } else if(player === "sidious"){
+        $("#collapseThree").collapse('hide');
+    } else if(player === "maul"){
+        $("#collapseFour").collapse('hide');
+    }
+    
 
     if (!game.isPlayerSelected) {
         $("#" + player + "-card").addClass("border border-success");

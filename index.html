@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STAR WARS RPG!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -20,15 +21,15 @@
 <body>
     <main role="main">
 
-        <section class="container">
-            <img class="img-fluid max-width: 100%" src="assets/images/STAR-WARS-BANNER.jpg" alt="">
+        <section class="container-fluid">
+            <img class="img-fluid max-width: 100%" src="assets/images/STAR-WARS-BANNER.jpg" alt="Star Wars" id="starWarsBaner">
         </section>
 
         <section class="container" id="informationSection">
             <!--Show message here-->
         </section>
 
-        <div class="album py-5 bg-light">
+        <div class="album py-5 bg-white" id="playArea">
             <div class="container">
 
                 <div class="row">
@@ -212,11 +213,11 @@
             </div>
         </div>
 
-        <div class="jumbotron">
+        <div class="jumbotron bg-white pt-1 pb-1">
             <!--Game comments on this row-->
             <div>
                 <div class="display-5 pb-5" id="information">
-                    <h1 class="display-5 text-center" id="presentation">Select you caracter!</h1>
+                    <h1 class="display-5 text-center" id="presentation">Select your caracter!</h1>
                 </div>
                 <ul class="col-md-8 mx-auto" style="display: none" id="gameActions">
                     <li class="list-group-item" id="attacker"></li>
